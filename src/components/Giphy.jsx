@@ -75,5 +75,3 @@ const Giphy = () => {
 
 export default Giphy
 
-// 40:30 - searching for gifs
-//https://www.youtube.com/watch?v=vYF_gLh2cz0
