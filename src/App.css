@@ -4,7 +4,7 @@ body {
   
   .gifs {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,3 +39,5 @@ body {
     margin-left: 5px;
     margin-right: auto;
   }
+
+ 

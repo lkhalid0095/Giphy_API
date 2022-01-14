@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios"
 import Loader from "./Loader";
 import Card from "./Card";
+import Search from "./Search";
 
 const Giphy = () => {
 
@@ -63,12 +64,14 @@ const Giphy = () => {
     }
 
 
-
     return (
-        <div className="m-2">
-            {renderError()}
-                        <div className="container gifs">
-                {renderGifs()}
+        <div>            
+            <div className="container">
+                {renderError()}
+                <Search setData={setData} data ={data}/>
+                <div className="container gifs">
+                    {renderGifs()}
+                </div>
             </div>
         </div>);
 };
