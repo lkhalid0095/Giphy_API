@@ -1,43 +1,54 @@
 body {
     background-color: white;
-  }
-  
-  .gifs {
+}
+
+.gifs {
     margin: 0 auto;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .gif {
+}
+
+.gif {
     padding: 0 2px;
-  }
-  
-  .loader {
+}
+
+.loader {
     color: blue;
-  }
+}
 
-  #gifs{
+#gifs {
     padding: 5px;
-  }
+}
 
-  form{ display: flex;}
+form {
+    display: flex;
+}
 
-
-  .form-control{
+.form-control {
     padding: 5px;
     width: 300px;
     margin-left: auto;
-  }
+}
 
-  .btn {
+.btn {
     margin-top: 5px;
     border-radius: 5px;
     background-color: rgb(35, 86, 255);
     color: white;
     margin-left: 5px;
     margin-right: auto;
-  }
+}
 
- 
+nav {
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 5px 10px #c5c3c3;
+    margin-bottom: 20px;
+}
