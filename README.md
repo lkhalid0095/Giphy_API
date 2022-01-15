@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Giphy API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Coding Exercise
+For this group assignment, you will create a simple web application that does the following:
 
 ## Update .env_sample file
 
@@ -8,67 +9,26 @@ Plase change .env_sample to .env and put your API Key.
 
 ## Available Scripts
 
-In the project directory, you can run:
+DO NOT WRITE ALL COMPONENTS IN ONE FILE. Break out components into separate files, and make sure that they are imported/exported properly
 
-### `npm start`
+Consider using three components:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+App Component: has state with GIFS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+SearchField Component: has state with search field input
 
-### `npm test`
+GifCard Component: presentational component receiving GIF info as props
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In order to interact with the API, you will need to create a free developer account and create a new project to have an API key generated for you.
 
-### `npm run build`
+To hit various GIPHY API Endpoints, you can use the following paths:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Regular Search: http://api.giphy.com/v1/gifs/search?q=SEARCH+TERM+GOES+HERE&api_key=YOUR_API_KEY
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+returns an array of gif objects
+Trending Search: http://api.giphy.com/v1/gifs/trending?api_key=YOUR_API_KEY
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+returns an array of gif objects
+Random Search: http://api.giphy.com/v1/gifs/random?api_key=YOUR_API_KEY
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+returns a singular gif object!
