@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Update .env_sample file
+
+Plase change .env_sample to .env and put your API Key.
+
 ## Available Scripts
 
 In the project directory, you can run:

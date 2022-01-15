@@ -15,7 +15,7 @@ const Search = ({setData}) => {
             event.preventDefault();
              const results = await axios("https://api.giphy.com/v1/gifs/search", {
                 params: {
-                    api_key: "TMdqSw6QfrLM4yIBy4v3foXetMoV2L48",
+                    api_key: `${process.env.REACT_APP_UNSPLASH_KEY}`,
                     q: search
                 }
             })
