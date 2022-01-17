@@ -61,10 +61,12 @@ const Giphy = () => {
         if(isLoading){
             return <Loader />
         }
-        return currentItems.map(el => {
+        // changed map(el) => key = {el.id} because of using same key
+        return currentItems.map((el,index )=> {
             return (
                 <Card 
-                     key={el.id} 
+                    //  key={el.id} 
+                     key= {index}
                      src={el.images.fixed_height.url}
                 />
             )
@@ -129,8 +131,7 @@ const Giphy = () => {
                 </div>
             {/*div for pageview ends*/}
                 </div>
-            {/*di for both ratings and amount ends*/}
-               
+            {/*di for both ratings and amount ends*/}               
                 <div className="container gifs">
                     {renderGifs()}                    
                 </div>
