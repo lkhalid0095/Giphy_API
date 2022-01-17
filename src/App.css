@@ -1,10 +1,65 @@
 body {
-    background-color: white;
+    background-color: black;
+    color:  whitesmoke;
 }
+
+/*gify nav bar area*/
+.box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.box .inner {
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4em;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box .inner:first-child {
+    background-color: whitesmoke;
+    color: darkred;
+    transform-origin: right;
+    transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+    background-color: lightcoral;
+    color: antiquewhite;
+    transform-origin: left;
+    transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+    animation-delay: 2.5s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+/*nav bar ends*/
 
 .gifs {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -55,12 +110,25 @@ nav {
 
 .pageview{
 text-align: right;
-margin-left: auto;
+margin-left: 200px;
 padding: 5px;
-color: gray;
+color: whitesmoke;
 }
 
 #inputNumber{
     padding-left: 5px;
     margin-left: 5px;
+}
+
+#dataselect {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+#rating {
+    margin-right: 200px;
+    height: 30px;
 }

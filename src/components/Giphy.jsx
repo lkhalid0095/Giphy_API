@@ -18,7 +18,8 @@ const Giphy = () => {
         console.log(event.target.value);
         setFilter(event.target.value)
     }
-    
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -81,8 +82,27 @@ const Giphy = () => {
             )
         }
     }
+// /change rating section
+      function changeRating(val) {
 
+        if (val === "none") {
+            setFilter(val.target.value)
+            console.log("rate")
 
+        }
+
+        if (val === "g") {
+            setFilter(val.target.value)
+        }
+
+        if (val === "pg") {
+        setFilter(val.target.value)
+        } 
+        if (val === "pg-13") {
+            setFilter(val.target.value)
+         }
+
+        }
 
     return (
         <div>            
@@ -91,10 +111,25 @@ const Giphy = () => {
                 <Search 
                     setData={setData} 
                 />
+            {/*div for ratings and amount of gifs*/}
+                <div id = "dataselect">
+            {/*ratings section*/}
+                <label className='rating-label'>Rating: </label>
+            <select name="rating" id="rating" onChange={changeRating}>
+                <option value="none" >None</option>
+                <option value="g">G</option>
+                <option value="pg">PG</option>
+                <option value="pg-13">PG-13</option>
+            </select>
+        {/*for rating section ends*/}
+        {/*div for page view/ amount begins*/}
                 <div className="pageview">
-                    Amount of gifs: 
+                    <label>Amount of gifs: </label>
                 <input id = "inputNumber" type="number" min="20" max="50" onChange={changeAmount}></input>
                 </div>
+            {/*div for pageview ends*/}
+                </div>
+            {/*di for both ratings and amount ends*/}
                
                 <div className="container gifs">
                     {renderGifs()}                    
