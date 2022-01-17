@@ -5,10 +5,10 @@ import Navbar from "./components/NavBar";
 import "./App.css";
 
 const App = () => {
-    return <div>
+    return <div className="app-container">
         <Navbar />
         <Giphy />
-    </div>
+         </div>
 };
 
 export default App
