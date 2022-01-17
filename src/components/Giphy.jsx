@@ -8,14 +8,24 @@ import Search from "./Search";
 const Giphy = () => {
 
     const [data, setData] =useState([]);   
-    const [filter, setFilter] = useState(20); 
+    const [filter, setFilter] = useState(25); 
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [rating, setRating] = useState("");
     const currentItems = data.slice(0, filter)
+    console.log(rating)
+    // const ratedItems = currentItems.filter(currentItem => currentItem.rating == filter).map(filteredItem =>{
+    // };
 
+    // const filterItem = (el) =>{ 
+    //     el.filter(currentItem => currentItem.rating === !rating)
+    //     .push(...currentItem, currentItems)
+    // }
+
+    // filterItem(currentItems)
     
     const changeAmount = (event) => {
-        console.log(event.target.value);
+        // console.log(event.target.value);
         setFilter(event.target.value)
     }
 
@@ -55,23 +65,69 @@ const Giphy = () => {
     },[]);
 
     console.log("filter after effect" +filter)
+    console.log( "after function " + rating)
 
 
-    const renderGifs = () => {
+    // const renderGifs = () => {
+    //     if(isLoading){
+    //         return <Loader />
+    //     }
+    //     // changed map(el) => key = {el.id} because of using same key
+    //     return currentItems.map((el,index )=> {
+    //         return (
+    //             <Card 
+    //                 //  key={el.id} 
+    //                  key= {index}
+    //                  src={el.images.fixed_height.url}
+    //             />
+    //         )
+    //     })
+    // }
+
+    const rendeGifs2 = () => {
         if(isLoading){
             return <Loader />
         }
-        // changed map(el) => key = {el.id} because of using same key
-        return currentItems.map((el,index )=> {
-            return (
-                <Card 
+
+        return (
+            
+            currentItems
+            .filter(currentItem => currentItem.rating === rating)
+            .map((currentItem,index) =>{
+                return (
+                    
+                    <Card 
                     //  key={el.id} 
                      key= {index}
-                     src={el.images.fixed_height.url}
+                     src={currentItem.images.fixed_height.url}
                 />
-            )
-        })
+                )
+            })
+        )
     }
+
+    // const rendeGifs2 = () => {
+    //     if(isLoading){
+    //         return <Loader />
+    //     }
+
+    //     return (
+            
+    //         currentItems
+    //         .filter(currentItem => currentItem.rating === rating)
+    //         .map((currentItem,index) =>{
+    //             return (
+                    
+    //                 <Card 
+    //                 //  key={el.id} 
+    //                  key= {index}
+    //                  src={currentItem.images.fixed_height.url}
+    //             />
+    //             )
+    //         })
+    //     )
+    // }
+
 
     const renderError = () => {
         if(isError){
@@ -85,26 +141,33 @@ const Giphy = () => {
         }
     }
 // /change rating section
-      function changeRating(val) {
+    //   function changeRating(val) {
 
-        if (val === "none") {
-            setFilter(val.target.value)
-            console.log("rate")
+    //     if (val === "none") {
+    //         setRating(val.target.value)
+    //         console.log("rate")
+    //       
+    //     }
 
-        }
+    //     if (val === "g") {
+    //         setRating(val.target.value)
+    //     }
 
-        if (val === "g") {
-            setFilter(val.target.value)
-        }
+    //     if (val === "pg") {
+    //         setRating(val.target.value)
+    //     } 
+    //     if (val === "pg-13") {
+    //         setRating(val.target.value)
+    //      }
 
-        if (val === "pg") {
-        setFilter(val.target.value)
-        } 
-        if (val === "pg-13") {
-            setFilter(val.target.value)
-         }
+    //     }
 
-        }
+    const changeRating = (event) => {
+      {event.target.value == "none" ? setRating("g"|| "pg" || "pg-13") : setRating(event.target.value)} 
+    }
+
+ 
+
 
     return (
         <div>            
@@ -118,7 +181,7 @@ const Giphy = () => {
             {/*ratings section*/}
                 <label className='rating-label'>Rating: </label>
             <select name="rating" id="rating" onChange={changeRating}>
-                <option value="none" >None</option>
+                <option value="none">None</option>
                 <option value="g">G</option>
                 <option value="pg">PG</option>
                 <option value="pg-13">PG-13</option>
@@ -127,13 +190,15 @@ const Giphy = () => {
         {/*div for page view/ amount begins*/}
                 <div className="pageview">
                     <label>Amount of gifs: </label>
-                <input id = "inputNumber" type="number" min="20" max="50" onChange={changeAmount}></input>
+                <input id = "inputNumber" type="number" min="25" max="50" onChange={changeAmount}></input>
                 </div>
             {/*div for pageview ends*/}
                 </div>
             {/*di for both ratings and amount ends*/}               
                 <div className="container gifs">
-                    {renderGifs()}                    
+                    {/* {renderGifs()}       */}
+                    
+                    {rendeGifs2()}              
                 </div>
             </div>
         </div>);
