@@ -5,11 +5,11 @@ export default function Navbar() {
         // <nav >
         //     <p > Giphy Search </p> { /* H1 for title is in the Zip2 */}
         // </nav>
-        <div class="box">
-  <div class="inner">
+        <div className="box">
+  <div className="inner">
     <span>Giphy Search</span>
   </div>
-  <div class="inner">
+  <div className="inner">
     <span>Giphy Search</span>
   </div>
 </div>
