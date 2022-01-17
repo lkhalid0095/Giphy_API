@@ -6,6 +6,7 @@ const Search = ({setData}) => {
 
     const [search, setSearch] = useState("");  
 
+
    
     const handleSearchChange = event =>{
         setSearch(event.target.value)
@@ -19,10 +20,12 @@ const Search = ({setData}) => {
                     q: search
                 }
             })
-            console.log(search)
-            console.log(results)
-         setData(results.data.data);      
+
+         setData(results.data.data);    
+        
     };   
+
+
 
     return (
         
@@ -31,6 +34,8 @@ const Search = ({setData}) => {
               <input value={search} onChange= {handleSearchChange} type = "text" placeholder="search" className="form-control"/>
               <button onClick={handleSubmit} type="submit" className="btn">Go</button>
             </form>
+            
+
             <div className="container gifs">
                      
             </div>
