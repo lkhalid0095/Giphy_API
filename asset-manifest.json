@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Giphy_API/static/css/main.efe74a2c.css",
+    "main.js": "/Giphy_API/static/js/main.a53f5280.js",
+    "index.html": "/Giphy_API/index.html",
+    "main.efe74a2c.css.map": "/Giphy_API/static/css/main.efe74a2c.css.map",
+    "main.a53f5280.js.map": "/Giphy_API/static/js/main.a53f5280.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efe74a2c.css",
+    "static/js/main.a53f5280.js"
+  ]
+}
