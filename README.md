@@ -1,5 +1,7 @@
 # Giphy API
 
+<p><a href ="https://lkhalid0095.github.io/Giphy_API/">Click Here</a> for website link<p>
+
 Coding Exercise
 For this group assignment, you will create a simple web application that does the following:
 
