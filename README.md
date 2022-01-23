@@ -1,5 +1,11 @@
 # Giphy API
 
+
+# Done by : 
+* [Farai Mutukumira](https://github.com/FaraiMajor)
+* [Lubna Khalid](https://github.com/lkhalid0095)
+* [Hyeran Park](https://github.com/HyeranPark99)
+
 <p><a href ="https://lkhalid0095.github.io/Giphy_API/">Click Here</a> for website link<p>
 
 Coding Exercise
